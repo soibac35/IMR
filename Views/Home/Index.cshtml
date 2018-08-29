@@ -16,20 +16,20 @@
                 if (user.Status == 1)
                 {
                     <button type="button" class="btn btn-success btn-sm btnClickOnline" disabled>Online</button>
-                    <button type="button" class="btn btn-danger btn-sm btnClickBusy" style="margin-left:20px;margin-right:20px;">Bận</button>
-                    <button type="button" class="btn btn-default btn-sm btnClickAbsent" style="background-color:#cecbcb;">Vắng mặt</button>
+                    <button type="button" class="btn btn-danger btn-sm btnClickBusy" style="margin-left:20px;margin-right:20px;">Busy</button>
+                    <button type="button" class="btn btn-default btn-sm btnClickAbsent" style="background-color:#cecbcb;">Absent</button>
                 }
                 if (user.Status == 3)
                 {
                     <button type="button" class="btn btn-success btn-sm btnClickOnline">Online</button>
-                    <button type="button" class="btn btn-danger btn-sm btnClickBusy" disabled style="margin-left:20px;margin-right:20px;">Bận</button>
-                    <button type="button" class="btn btn-default btn-sm btnClickAbsent" style="background-color:#cecbcb;">Vắng mặt</button>
+                    <button type="button" class="btn btn-danger btn-sm btnClickBusy" disabled style="margin-left:20px;margin-right:20px;">Busy</button>
+                    <button type="button" class="btn btn-default btn-sm btnClickAbsent" style="background-color:#cecbcb;">Absent</button>
                 }
                 if (user.Status == 2)
                 {
                     <button type="button" class="btn btn-success btn-sm btnClickOnline">Online</button>
-                    <button type="button" class="btn btn-danger btn-sm btnClickBusy" style="margin-left:20px;margin-right:20px;">Bận</button>
-                    <button type="button" class="btn btn-default btn-sm btnClickAbsent" disabled style="background-color:#cecbcb;">Vắng mặt</button>
+                    <button type="button" class="btn btn-danger btn-sm btnClickBusy" style="margin-left:20px;margin-right:20px;">Busy</button>
+                    <button type="button" class="btn btn-default btn-sm btnClickAbsent" disabled style="background-color:#cecbcb;">Absent</button>
                 }
 
             }
@@ -43,8 +43,8 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Họ & Tên</th>
-                    <th>Trạng thái</th>
+                    <th>FullName</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,7 +60,7 @@
                                 {
                                     if (user.UserName == item.UserName)
                                     {
-                                        <button type="button" class="btn btn-warning btn-sm delete">Xóa</button>
+                                        <button type="button" class="btn btn-warning btn-sm delete">Delete</button>
                                     }
                                 }
                             </td>
@@ -68,12 +68,12 @@
                         @if (item.Status == 2)
                         {
                             <td>
-                                <button type="button" class="btn btn-default btn-sm" style="background-color:#cecbcb;">Vắng mặt</button>
+                                <button type="button" class="btn btn-default btn-sm" style="background-color:#cecbcb;">Absent</button>
                                 @if (user != null)
                                 {
                                     if (user.UserName == item.UserName)
                                     {
-                                        <button type="button" class="btn btn-warning btn-sm delete">Xóa</button>
+                                        <button type="button" class="btn btn-warning btn-sm delete">Delete</button>
                                     }
                                 }
                             </td>
@@ -81,12 +81,12 @@
                         @if (item.Status == 3)
                         {
                             <td>
-                                <button type="button" class="btn btn-danger btn-sm">Bận</button>
+                                <button type="button" class="btn btn-danger btn-sm">Busy</button>
                                 @if (user != null)
                                 {
                                     if (user.UserName == item.UserName)
                                     {
-                                        <button type="button" class="btn btn-warning btn-sm delete">Xóa</button>
+                                        <button type="button" class="btn btn-warning btn-sm delete">Delete</button>
                                     }
                                 }
                             </td>
